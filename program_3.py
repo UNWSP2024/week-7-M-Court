@@ -41,7 +41,7 @@ def main():
 		list = ()
 		#populate tuple
 		list = (year, name, population)
-		#populate umbrella tuple
+		#populate umbrella list
 		all_entered_values.append(list)
 		return list
 		return all_entered_values
