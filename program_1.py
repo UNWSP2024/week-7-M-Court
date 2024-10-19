@@ -15,7 +15,7 @@
 #create list
 yearly_rain_list = []
 
-#fine total rainfall
+#find total rainfall
 def make_rain_list():
 	#populate list
 	for months in range(1,4):
@@ -27,12 +27,12 @@ def make_rain_list():
 
 #find total
 def total_rain_function(yearly_rain_list):
-	total_rain = sum(yearly_rain_list)
-	return total_rain
+	total_rain_results = sum(yearly_rain_list)
+	return total_rain_results
 
 #find average
-def find_average(total_rain):	
-	average = total_rain/12
+def find_average(total_rain_results):	
+	average = total_rain_results/3
 	return average
 
 def high(yearly_rain_list):
@@ -49,19 +49,19 @@ def low(yearly_rain_list):
 #make list of rain each month
 make_rain_list()
 #get total rain
-total_rain_function(yearly_rain_list)
+total_rain_results = total_rain_function(yearly_rain_list)
 #find average
-find_average(total_rain)
+average = find_average(total_rain_results)
 #find highest
-high(yearly_rain_list)
+highest_month = high(yearly_rain_list)
 #find lowest
-low(yearly_rain_list)
+lowest_month = low(yearly_rain_list)
 
 #PART 3 DISPLAY-----------------------------------------
 
 print(f"{yearly_rain_list}")
 #display total
-print(f"the total rainfall for the year is {total_rain}")
+print(f"the total rainfall for the year is {total_rain_results}")
 #display average
 print(f"the average for the year is {average}")
 #display highest
