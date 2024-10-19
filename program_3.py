@@ -59,7 +59,7 @@ def sum_population(list, all_entered_values):
 	#get year
 	user_year = int(input("What year? "))
 	while user_year in list:
-		total_population += list(3)
+		total_population += list(2)
 		print(total_population)
 
 #populate tuples and list
