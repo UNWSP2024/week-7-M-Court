@@ -43,8 +43,6 @@ def main():
 		list = (year, name, population)
 		#populate umbrella list
 		all_entered_values.append(list)
-		return list
-		return all_entered_values
 		
 		repeat = input("Do you have another entry? Enter 'y' for yes.")
 		#repeat
@@ -54,6 +52,9 @@ def main():
 		if repeat != "y":
 			print(all_entered_values)
 			break
+            
+        return list
+		return all_entered_values
 
 def sum_population(list, all_entered_values):
 	#get year
