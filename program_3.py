@@ -26,37 +26,39 @@
 
     
 #-------------MY CODE-------------#    
-    
+
 repeat = "y"
 all_entered_values = []
 
 def main():
 	while True:
-		print("Create an entry...")
 		#populate list
 		year = int(input("Enter the year: "))
 		name = input("Enter the state's name: ")
 		population = int(input("Enter the population: "))
+		
 		#create tuple
 		list = ()
 		#populate tuple
 		list = (year, name, population)
 		#populate umbrella tuple
 		all_entered_values.append(list)
+		return list
+		return all_entered_values
+		
 		repeat = input("Do you have another entry? Enter 'y' for yes.")
+		#repeat
 		if repeat == "y":
-			print("Create an entry...")
+			print("Create another entry...")
+		#not repeat
 		if repeat != "y":
 			print(all_entered_values)
 			break
-		return list
-		return all_entered_values
 
 def sum_population(list, all_entered_values):
 	#get year
 	user_year = int(input("What year? "))
-	print(list(3))
-	while user_year in all_entered_values:
+	while user_year in list:
 		total_population += list(3)
 		print(total_population)
 
@@ -64,3 +66,4 @@ def sum_population(list, all_entered_values):
 main()
 #find sum
 total_population = sum_population(list,all_entered_values)
+print(total_population)
