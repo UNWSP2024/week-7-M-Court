@@ -1,36 +1,41 @@
-# Program #2: Larger than n
-# In a program, write a function (with NO output) that accepts two arguments: number n, and a list.
-# Assume that the list contains numbers.
-# The function shell has been written out on line 30, (def display_larger_than_n_list)
-# and should display all of the numbers in the list that are greater than then number n.
+#2: Larger than n
 
-def main():
-    # Declare local variables
-    number = 5
-    number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#In a program, write a function (with NO output) that accepts two arguments: 
+		#a list
+		#and a number n.  
+#Assume that the list contains numbers. The function should display all of the numbers in the list that are greater than the number n.
 
-    # Display the number.
-    print('Number:', number)
 
-    # Display the list of numbers.
-    print('List of numbers:')
-    print(f'{number_list}')
-    
-    # Display the list of numbers that are larger
-    # than the number.
-    print(f'List of numbers that are larger than {number}:')
-    
-    # Call the display_larger_than_n_list function,
-    # passing a number and number list as arguments.
-    display_larger_than_n_list(number, number_list)
+#STARTER DEFINITIONS
+#define "repeat"
+repeat = "y"
+#list for greater
+GREATER = []
+#list for less
+LESSER = []
 
-# The display_larger_than_n_list function accepts two arguments:
-# a list, and a number. The function displays all of the numbers
-# in the list that are greater than the number.
-def display_larger_than_n_list(n, n_list):
-    # Write your code to display all of the numbers in the list that are greater than then number n. below
-    print('In display_larger_than_n_list')
-        
-# Call the main function.
-if __name__ == '__main__':
-    main()
+def display_greaters(number):
+	while True:
+		#populate numbers
+		if number > n:
+			GREATER.append(number)
+		if number <= n:
+			LESSER.append(number)
+			
+		#repeat?
+		repeat = input("would you like to enter another number? If so, type 'y'.")	
+		#repeat		
+		if repeat == "y":
+				number = int(input("enter a number: "))
+		#not repeat
+		if repeat != "y":
+			break		
+
+#user defines n
+n = int(input("Enter a number for 'n': "))
+#user enters 1st number
+number = int(input("enter a number: "))	
+#user creates list with function
+display_greaters(number)
+#print
+print(f"The numbers greater than 'n' are {GREATER}")	

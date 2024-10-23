@@ -1,25 +1,54 @@
-# Program #3: US_Population
+#Have the user input (using a loop) various information that contains three pieces of data: year, name of state, and population.  Store all of this information in a list of lists.  For example it might be stored like this:
+
+#[[2010, "Maine", 1987435], [2010,"Minnesota",6873202], [2011, "Iowa", 3421988]]
+
+#Now have the user enter a year.  The program will add the populations from all states in the list of list for that year only
+
+repeat = "y"
+all_entered_values = []
+
 def main():
-    # Have the user input (using a loop) various information that contains three pieces of data: 
-    # year, name of state, and population.  
-    # Store all of this information in a list of lists.  For example it might be stored like this:
-    
-    # [[2010, "Maine", 1987435], [2010,"Minnesota",6873202], [2011, "Iowa", 3421988]]
-    all_entered_values = []
+	while True:
+		#populate list
+		year = int(input("Enter the year: "))
+		name = input("Enter the state's name: ")
+		population = int(input("Enter the population: "))
 
-    # Now have the user enter a year. 
-    
-    # The program will add the populations from all states in the list of list for that year only.
-    # Pass the list and year to the sum_population_for_year
+		#create tuple
+		state_tuple = ()
+		#populate tuple
+		state_tuple = (year, name, population)
+		#populate total list
+		all_entered_values.append(state_tuple)
 
-def sum_population_for_year(all_entered_values, year_to_sum):
-    # Loop through and sum the populations for the appropriate year. 
-    # e.g. for the list on line 7 the total would be 8,860,637 if the user enterd 2010 for the year to sum,
-    # or 3,421,988 if they enterd 2011 for the year to sum.
+		#repeat?
+		repeat = input("Do you have another entry? Enter 'y' for yes.")
+		#repeat
+		if repeat == "y":
+			print("Create another entry...")
+		#not repeat
+		if repeat != "y":
+			print(all_entered_values)
+			#return list and total
+			return all_entered_values
 
-    # print the totalled population
+def sum_population(user_year, all_entered_values):
+	#declare
+	total_population = 0
+	#get year
+	
+	print(all_entered_values)
+	#add to total_population
+	for state_list in all_entered_values:
+		if state_list[0] == user_year:
+			total_population += state_list[2]
+	return total_population
 
+#populate tuples and list
+all_populated_lists = main()
+print(all_populated_lists)
 
-# Call the main function.
-if __name__ == '__main__':
-    main()
+#find sum
+user_year = int(input("What year? "))
+total_population = sum_population(user_year, all_populated_lists)
+print(f"the total population in {user_year} was {total_population}")
