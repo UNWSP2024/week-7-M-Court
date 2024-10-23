@@ -25,16 +25,16 @@ def total_rain_function(yearly_rain_list):
 
 #find average
 def find_average(total_rain_results):	
-	average = total_rain_results/12
-	return average
+		average = total_rain_results/12
+		return average
 
 def high(yearly_rain_list):
-	highest_month = max(yearly_rain_list)
-	return highest_month	
+		highest_month = max(yearly_rain_list)
+		return highest_month	
 		
 def low(yearly_rain_list):
-	lowest_month = min(yearly_rain_list)
-	return lowest_month
+		lowest_month = min(yearly_rain_list)
+		return lowest_month
 
 
 #PART 2 RUN FUNCTIONS----------------------------------
